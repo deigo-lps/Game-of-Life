@@ -1,0 +1,42 @@
+@import "./reset";
+body{
+  background-color: #061923;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  div{
+    border:0.5px solid lighten(#061923,10);
+    flex-grow: 1;
+    cursor: pointer;
+    &:hover{
+      background-color: lighten(#061923,10);
+    }
+    &.active{
+      background-color: lighten(#061923,20);
+    }
+  }
+  button{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    border-radius: 50%;
+    position:fixed;
+    bottom:1rem;
+    right:1rem;
+    cursor: pointer;
+    background-color: lighten(#061923,5);
+    border:none;
+    &,&:active,&:focus{
+      outline: none;
+    }
+    svg{
+      fill:lighten(#061923,30);
+      margin:auto;
+      width: 60%;
+      height: 60%;
+    }
+  }
+}
