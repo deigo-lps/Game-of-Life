@@ -14,7 +14,6 @@ function App() {
   const buttonRef = useRef();
 
   const handleTileClick = (event) => {
-    console.log(event);
     if(!hasStarted && (event.buttons === 1 || event._reactName === 'onClick')){
       let tempTiles = JSON.parse(JSON.stringify(tiles));
       const i = event.target.getAttribute("i");
@@ -92,6 +91,7 @@ function App() {
               onClick={handleTileClick}
               i={i}
               j={j}
+              key={`${i} ${j}`}
               className={tile ? "active" : ""}
             >
             </div>
